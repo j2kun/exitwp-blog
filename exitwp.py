@@ -124,7 +124,7 @@ def parse_wp_xml(file):
                     tag = q
                 try:
                     result = i.find(ns[namespace] + tag).text
-                    print result.encode('utf-8')
+                    # print result.encode('utf-8')
                 except AttributeError:
                     result = 'No Content Found'
                     if empty:
@@ -289,7 +289,7 @@ def write_jekyll(data, target_format):
         sys.stdout.write('.')
         sys.stdout.flush()
         out = None
-		
+
         item_url = urlparse(i['link'])        # AW!!: Store item url for later url path relative
         yaml_header = {
             'title': i['title'],
